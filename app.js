@@ -14,11 +14,10 @@
             url : queryURL,
             method : "GET",
         }).done(function(response){
-            console.log(response);
-            var results = response.data;
-            for (i = 0; i < results.length; i++){
+            var results = response.response.data;
+            for (i = 0; i < results; i++){
                 var article = $("<div class='article>");
-                article.append("<h2>" + response.doc[i].snippet + "</h2>");
+                article.append("<h2>" + response.response.doc[i].snippet + "</h2>");
                 $("#article-list").append(article);
             }
 
