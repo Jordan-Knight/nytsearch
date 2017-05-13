@@ -3,7 +3,7 @@
     var startYear = 0;
     var endYear = 0;
     var results = 0;
-    var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=" + key + "&q=thing";
+    var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=" + key + "&q=holland";
   $("#runSearch").on("click", function(event){
 
     var searchTerm = $("#input").val();
@@ -15,7 +15,12 @@
             method : "GET",
         }).done(function(response){
             console.log(response);
-            var results = "";
+            var results = response.data;
+            for (i = 0; i < results.length; i++){
+                var article = $("<div class='article>");
+                article.append("<h2>" + response.doc[i].snippet + "</h2>");
+                $("#article-list").append(article);
+            }
 
 
         });
