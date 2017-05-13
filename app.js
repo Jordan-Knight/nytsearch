@@ -2,7 +2,7 @@
     var searchTerm = "";
     var startYear = 0;
     var endYear = 0;
-    var results = 0;
+    var results = 10;
     var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=" + key + "&q=holland";
   $("#runSearch").on("click", function(event){
 
@@ -14,7 +14,7 @@
             url : queryURL,
             method : "GET",
         }).done(function(response){
-            var results = response.response.data;
+        
             for (i = 0; i < results; i++){
                 var article = $("<div class='article>");
                 article.append("<h2>" + response.response.doc[i].snippet + "</h2>");
