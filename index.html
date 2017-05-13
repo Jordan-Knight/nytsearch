@@ -6,8 +6,7 @@
 	<title>NY Times Search</title>
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" media="screen">
 	<link rel="stylesheet" type="text/css" href="styles.css" media="screen">
-	<script src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js'></script>
-    <script src = "app.js"></script>
+
 </head>
 
 <body>
@@ -20,18 +19,18 @@
     <h3 class="panel-title">Search Parameters</h3>
   </div>
   <div class="panel-body">
-<form role="form">
+
 
                         <!-- Here we create the text box for capturing the search term-->
                       <div class="form-group">
                         <label for="search">Search Term:</label>
-                        <input type="text" class="form-control" id="searchTerm">
+                        <input type="text">
                       </div>
 
                       <!-- Here we capture the number of records that the user wants to retrieve  -->
                       <div class="form-group">
                         <label for="pwd">Number of Records to Retrieve:</label>
-                        <select class="form-control" id="numRecordsSelect">
+                        <select  id="numRecordsSelect">
                             <option value="1">1</option>
                             <!-- Setting the option for 5 as default -->
                             <option value="5" selected="">5</option>
@@ -42,20 +41,20 @@
                         <!-- Here we capture the Start Year Parameter-->
                       <div class="form-group">
                         <label for="startYear">Start Year (Optional):</label>
-                        <input type="text" class="form-control" id="startYear">
+                        <input type="text"  id="startYear">
                       </div>
 
                         <!-- Here we capture the End Year Parameter -->
                       <div class="form-group">
                         <label for="endYear">End Year (Optional):</label>
-                        <input type="text" class="form-control" id="endYear">
+                        <input type="text"  id="endYear">
                       </div>
 
                       <!-- Here we have our final submit button -->
-                      <button type="submit" class="btn btn-default" id="runSearch">Search</button>
+                      <button id="runSearch" type="submit" class="btn btn-default" >Search</button>
                         <button type="button" class="btn btn-default" id="clearAll"><i class="fa fa-trash"></i> Clear Results</button>
 
-                    </form>
+                    
   </div>
 <br>
 <br>
@@ -67,5 +66,8 @@
   </div>
 </div>
 </div>
+	<script src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js'></script>
+  <script src = "app.js"></script>
 </body>
+
 </html>

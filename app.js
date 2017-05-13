@@ -6,9 +6,9 @@
     var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=" + key + "&q=thing";
   $("#runSearch").on("click", function(event){
 
-    //  var searchTerm = $("#input").val();
-     // var queryURL = queryURL + searchTerm;
-    //  var results = $("#inputRes").val();
+    var searchTerm = $("#input").val();
+    var queryURL = queryURL + searchTerm;
+    var results = $("#inputRes").val();
       
         $.ajax({
             url : queryURL,
